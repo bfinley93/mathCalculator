@@ -5,32 +5,37 @@
   <meta charset="utf-8">
   <title>Calculator</title>
   <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <input id="firstNum" type="number">
-  <input id="secondNum" type="number">
-  <button onclick="calculator(
-    add,
-    document.getElementById('firstNum').value,
-    document.getElementById('secondNum').value)">+</button>
-  <button onclick="calculator(
-      subtract,
-      document.getElementById('firstNum').value,
-      document.getElementById('secondNum').value)">-</button>
-  <button onclick="calculator(
-        multiply,
-        document.getElementById('firstNum').value,
-        document.getElementById('secondNum').value)">*</button>
-  <button onclick="calculator(
-          divide,
-          document.getElementById('firstNum').value,
-          document.getElementById('secondNum').value)">/</button>
-  <button onclick="calculator(
-            moduloDivide,
-            document.getElementById('firstNum').value,
-            document.getElementById('secondNum').value)">%</button>
-  <input id="answer" disabled>
+  <input id="numsBox" type="number"><br>
+
+  <button class="operator">(</button>
+  <button class="operator">)</button>
+  <button id="moduloDivide" value="moduloDivide" class="operator" onclick="operate(document.getElementById('moduloDivide').value)">%</button>
+
+  <button onclick="clearBox()" class="operator">AC</button><br>
+
+  <button id="7" value="7" onclick="updateNumsBox(document.getElementById('7').value);">7</button>
+  <button id="8" value="8" onclick="updateNumsBox(document.getElementById('8').value);">8</button>
+  <button id="9" value="9" onclick="updateNumsBox(document.getElementById('9').value);">9</button>
+  <button id="divide" value="divide" class="operator" onclick="operate(document.getElementById('divide').value)">/</button><br>
+
+  <button id="4" value="4" onclick="updateNumsBox(document.getElementById('4').value);">4</button>
+  <button id="5" value="5" onclick="updateNumsBox(document.getElementById('5').value);">5</button>
+  <button id="6" value="6" onclick="updateNumsBox(document.getElementById('6').value);">6</button>
+  <button id="multiply" value="multiply" class="operator" onclick="operate(document.getElementById('multiply').value)">*</button><br>
+
+  <button id="1" value="1" onclick="updateNumsBox(document.getElementById('1').value);">1</button>
+  <button id="2" value="2" onclick="updateNumsBox(document.getElementById('2').value);">2</button>
+  <button id="3" value="3" onclick="updateNumsBox(document.getElementById('3').value);">3</button>
+  <button id="subtract" value="subtract" class="operator" onclick="operate(document.getElementById('subtract').value)">-</button><br>
+
+  <button id="0" value="0" onclick="updateNumsBox(document.getElementById('0').value);">0</button>
+  <button id="decimal">.</button>
+  <button onclick="equalsBtn()" id="equals">=</button>
+  <button id="add" value="add" class="operator" onclick="operate(document.getElementById('add').value)">+</button>
 
 </body>
 

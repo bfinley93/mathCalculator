@@ -1,0 +1,22 @@
+#numsBox {
+    direction: rtl;
+    width: 335px;
+    height: 31px;
+}
+
+button {
+    height: 35px;
+    width: 78px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#equals {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.operator {
+    background-color: #dfe1e5;
+}
